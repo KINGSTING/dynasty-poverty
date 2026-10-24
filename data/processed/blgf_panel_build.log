@@ -1,0 +1,13 @@
+2026-10-13 09:51:51,194 | INFO    | Loading PSGC master: data\processed\psgc_lgu_master.parquet
+2026-10-13 09:51:51,224 | INFO    | Loading sre: data\processed\sre_panel_with_psgc.parquet
+2026-10-13 09:51:51,244 | INFO    |   56107 rows x 64 cols
+2026-10-13 09:51:51,288 | INFO    | Loading ari: data\processed\ari_panel_with_psgc.parquet
+2026-10-13 09:51:51,295 | INFO    |   27367 rows x 31 cols
+2026-10-13 09:51:51,313 | INFO    | Loading sef: data\processed\sef_panel_with_psgc.parquet
+2026-10-13 09:51:51,318 | INFO    |   27208 rows x 23 cols
+2026-10-13 09:51:51,331 | INFO    | Loading ldrrmf: data\processed\ldrrmf_panel_with_psgc.parquet
+2026-10-13 09:51:51,334 | INFO    |   9727 rows x 15 cols
+2026-10-13 09:51:51,341 | INFO    | Loading enr: data\processed\enr_panel_with_psgc.parquet
+2026-10-13 09:51:51,343 | INFO    |   638 rows x 18 cols
+2026-10-13 09:51:51,665 | INFO    | Wrote data\processed\blgf_panel.parquet (55954 rows x 122 cols)
+2026-10-13 09:51:51,672 | INFO    | Wrote blgf_panel_qa.txt

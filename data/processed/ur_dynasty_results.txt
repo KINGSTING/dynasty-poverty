@@ -1,0 +1,140 @@
+==============================================================================
+UR × POLITICAL DYNASTY
+==============================================================================
+Panel:          data\processed\panel_ml.parquet
+Dynasty file:   data\processed\dynasty_measures_lgu_year.parquet
+Dynasty column: dynasty_senior_any
+Regressor:      dynasty_senior_any  (lagged=False)
+Window:         2009-2024
+Sample rows:    22,821
+Sample LGUs:    1,693
+
+-- dynasty regressor distribution --
+  non-null    22,821
+  mean         0.000
+  std          1.000
+  p10         -1.311
+  p25         -1.311
+  p50          0.763
+  p75          0.763
+  p90          0.763
+
+==============================================================================
+A. NAIVE PERSISTENCE ANCHOR
+==============================================================================
+   target_ur_b(t+1) ~ ur_b_current(t)
+------------------------------------------------------------------------------
+A. Naive persistence
+------------------------------------------------------------------------------
+  n_obs      = 22,695
+  n_entities = 1,693
+  FE         = LGU + year FE
+  R²         = 0.0288
+
+  regressor                                    coef         se        t        p
+  ur_b_current                               0.1681     0.0127    13.20    0.000 ***
+
+==============================================================================
+B. DYNASTY → UR (contemporaneous), SRE-only controls
+==============================================================================
+------------------------------------------------------------------------------
+B. SRE-only controls
+------------------------------------------------------------------------------
+  n_obs      = 22,066
+  n_entities = 1,627
+  FE         = LGU + year FE
+  R²         = 0.0010
+
+  regressor                                    coef         se        t        p
+  dynasty_senior_any                        -0.0013     0.0014    -0.94    0.349 
+  local_share                                0.0100     0.0049     2.03    0.042 **
+  log_land_area_sqkm                         0.0594     0.0906     0.66    0.512 
+  log_population                            -0.0141     0.0279    -0.50    0.614 
+  nta_dependency                             0.0067     0.0039     1.75    0.081 *
+  revenue_hhi                                0.0011     0.0018     0.63    0.529 
+
+==============================================================================
+C. DYNASTY → UR (contemporaneous), SRE + BLGF controls
+==============================================================================
+------------------------------------------------------------------------------
+C. SRE + BLGF controls
+------------------------------------------------------------------------------
+  n_obs      = 6,956
+  n_entities = 1,594
+  FE         = LGU + year FE
+  R²         = 0.0170
+
+  regressor                                    coef         se        t        p
+  dynasty_senior_any                        -0.0023     0.0027    -0.85    0.393 
+  ari_lsr_dependency                         0.0107     0.0187     0.57    0.567 
+  ari_nta_dependency                        -0.0006     0.0071    -0.08    0.938 
+  ari_other_shares_dependency               -0.0037     0.0090    -0.41    0.682 
+  ldrrmf_budget_share                       -0.0004     0.0002    -2.50    0.012 **
+  ldrrmf_overall_utilization                 0.0015     0.0024     0.63    0.530 
+  local_share                                0.0036     0.0164     0.22    0.825 
+  log_ari_ari                               -0.0523     0.0389    -1.35    0.178 
+  log_ari_total_lsr                         -0.0062     0.0112    -0.56    0.576 
+  log_land_area_sqkm                        -0.0878     0.0943    -0.93    0.352 
+  log_population                             0.0207     0.0787     0.26    0.793 
+  log_sef_total_expenditures                -0.0071     0.0064    -1.12    0.264 
+  nta_dependency                             0.0255     0.0093     2.75    0.006 ***
+  revenue_hhi                                0.0050     0.0044     1.16    0.247 
+
+==============================================================================
+D. DYNASTY → UR (fractional logit), SRE-only controls
+==============================================================================
+------------------------------------------------------------------------------
+D. Fractional logit — SRE-only
+------------------------------------------------------------------------------
+  n_obs      = 22,066
+  n_entities = 1,627
+  FE         = year dummies
+
+  regressor                                    coef         se        t        p
+  dynasty_senior_any                        -0.0106     0.0110    -0.97    0.333 
+  local_share                               -0.0750     0.0210    -3.58    0.000 ***
+  log_land_area_sqkm                        -0.0126     0.0147    -0.86    0.392 
+  log_population                             0.0530     0.0180     2.93    0.003 ***
+  nta_dependency                            -0.1855     0.0186    -9.95    0.000 ***
+  revenue_hhi                                0.0137     0.0141     0.97    0.331 
+
+==============================================================================
+E. DYNASTY → UR (fractional logit), SRE + BLGF controls
+==============================================================================
+------------------------------------------------------------------------------
+E. Fractional logit — SRE + BLGF
+------------------------------------------------------------------------------
+  n_obs      = 6,956
+  n_entities = 1,594
+  FE         = year dummies
+
+  regressor                                    coef         se        t        p
+  dynasty_senior_any                        -0.0077     0.0144    -0.54    0.592 
+  ari_lsr_dependency                        -0.4552     0.1043    -4.36    0.000 ***
+  ari_nta_dependency                        -0.0778     0.0402    -1.93    0.053 *
+  ari_other_shares_dependency               -0.1443     0.0422    -3.42    0.001 ***
+  ldrrmf_budget_share                       -0.0042     0.0012    -3.46    0.001 ***
+  ldrrmf_overall_utilization                -0.2357     0.0160   -14.71    0.000 ***
+  local_share                                0.1464     0.1013     1.44    0.149 
+  log_ari_ari                                0.3792     0.0801     4.74    0.000 ***
+  log_ari_total_lsr                          0.3723     0.0706     5.27    0.000 ***
+  log_land_area_sqkm                        -0.0252     0.0165    -1.52    0.128 
+  log_population                            -0.1634     0.0384    -4.26    0.000 ***
+  log_sef_total_expenditures                -0.1844     0.0274    -6.73    0.000 ***
+  nta_dependency                            -0.2654     0.0562    -4.72    0.000 ***
+  revenue_hhi                                0.0002     0.0174     0.01    0.992 
+
+
+==============================================================================
+HEADLINE: coefficient on dynasty measure
+==============================================================================
+  spec                                 coef         se        p        n  stars 
+  B. SRE controls                   -0.0013     0.0014    0.349   22,066        
+  C. SRE + BLGF controls            -0.0023     0.0027    0.393    6,956        
+  D. Fractional logit (SRE)         -0.0106     0.0110    0.333   22,066        
+  E. Fractional logit (SRE+BLGF)    -0.0077     0.0144    0.592    6,956        
+
+Reading:  A negative coefficient means a higher dynasty
+          measure predicts LOWER underutilization at t+1.
+          Compare C vs B (and E vs D) to see how beta moves
+          when BLGF fiscal controls are added.

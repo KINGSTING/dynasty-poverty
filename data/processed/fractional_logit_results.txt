@@ -1,0 +1,81 @@
+============================================================================================
+FRACTIONAL RESPONSE ROBUSTNESS CHECK
+============================================================================================
+Sample: 53,190 LGU-years, 1,641 LGUs
+Years: 1992-2024
+
+-- Boundary mass on ur_b --
+  ur_b == 0               6,854 (12.89%)
+  ur_b == 1                 162 ( 0.30%)
+  ur_b in [0, 0.01]       9,339 (17.56%)
+  ur_b in [0.99, 1]         163 ( 0.31%)
+
+Specifications:
+  FL1  Fractional logit + Mundlak + year dummies
+  FL2  Fractional probit + Mundlak + year dummies
+  OLS  Linear two-way FE (comparison)
+
+Standard errors: cluster-robust by LGU.
+
+============================================================================================
+FL1_logit
+============================================================================================
+variable                                    coef          se       t        p
+--------------------------------------------------------------------------------------------
+nta_dependency                          -2.74183     0.09553  -28.70   0.0000
+log_nta_ira                              0.54816     0.07217    7.60   0.0000
+log_total_local_sources                 -0.13086     0.02455   -5.33   0.0000
+revenue_hhi                              0.43301     0.08482    5.11   0.0000
+log_population                          -0.14542     0.15614   -0.93   0.3517
+pop_density                              0.00096     0.00029    3.33   0.0009
+
+============================================================================================
+FL2_probit
+============================================================================================
+variable                                    coef          se       t        p
+--------------------------------------------------------------------------------------------
+nta_dependency                          -1.49148     0.05476  -27.24   0.0000
+log_nta_ira                              0.29743     0.03794    7.84   0.0000
+log_total_local_sources                 -0.07040     0.01360   -5.18   0.0000
+revenue_hhi                              0.22976     0.04606    4.99   0.0000
+log_population                          -0.08375     0.08561   -0.98   0.3279
+pop_density                              0.00057     0.00017    3.44   0.0006
+
+============================================================================================
+OLS_twoway_FE
+============================================================================================
+variable                                    coef          se       t        p
+--------------------------------------------------------------------------------------------
+nta_dependency                          -0.35711     0.01669  -21.40   0.0000
+log_nta_ira                              0.06521     0.00760    8.59   0.0000
+log_total_local_sources                 -0.01438     0.00326   -4.41   0.0000
+revenue_hhi                              0.04797     0.00948    5.06   0.0000
+log_population                          -0.04678     0.01994   -2.35   0.0190
+pop_density                              0.00021     0.00005    4.24   0.0000
+
+============================================================================================
+AVERAGE MARGINAL EFFECTS (E[ur_b] scale)
+============================================================================================
+For a one-unit change in X, the AME measures the average effect on E[ur_b].
+
+-- logit --
+  nta_dependency                      AME =   -0.30839
+  log_nta_ira                         AME =   +0.06166
+  log_total_local_sources             AME =   -0.01472
+  revenue_hhi                         AME =   +0.04870
+  log_population                      AME =   -0.01636
+  pop_density                         AME =   +0.00011
+
+-- probit --
+  nta_dependency                      AME =   -0.31058
+  log_nta_ira                         AME =   +0.06194
+  log_total_local_sources             AME =   -0.01466
+  revenue_hhi                         AME =   +0.04785
+  log_population                      AME =   -0.01744
+  pop_density                         AME =   +0.00012
+
+-- Interpretation --
+FL1 and FL2 are the Papke-Wooldridge robustness checks.
+If the sign and significance of nta_dependency survive under the
+fractional specification, the linear specification is adequate.
+AME provides a magnitude interpretable on the probability scale.

@@ -1,0 +1,49 @@
+==============================================================================
+DYNASTY BUILD QA
+==============================================================================
+Candidate rows (pre-expansion): 122,367
+Candidates with psgc10:         122,367
+Dynasty rate (candidate):       49.43%
+
+-- Candidate-level dynasty rate by year --
+  2004: n=17,430  dynasty_rate=40.55%  mean_community_size=2.63
+  2007: n=16,681  dynasty_rate=48.20%  mean_community_size=3.21
+  2010: n=17,587  dynasty_rate=50.51%  mean_community_size=3.60
+  2013: n=17,253  dynasty_rate=50.63%  mean_community_size=3.50
+  2016: n=17,655  dynasty_rate=52.06%  mean_community_size=3.88
+  2019: n=18,134  dynasty_rate=50.72%  mean_community_size=3.82
+  2022: n=17,627  dynasty_rate=53.17%  mean_community_size=4.05
+
+-- Four-tier type distribution --
+  DIST_DYN   3,228
+  MIN_DYN    19,477
+  MUN_DYN    33,747
+  PROV_DYN   4,035
+
+-- LGU-year panel --
+Rows: 32,358   LGUs: 1,695
+Years: 2004-2024
+dynasty_any rate: 92.26%
+
+-- dynasty_any by year --
+  2004: n_lgus=1,582  dynasty_any=94.63%  mean_share=0.392
+  2005: n_lgus=1,582  dynasty_any=94.63%  mean_share=0.392
+  2006: n_lgus=1,582  dynasty_any=94.63%  mean_share=0.392
+  2007: n_lgus=1,513  dynasty_any=96.36%  mean_share=0.475
+  2008: n_lgus=1,513  dynasty_any=96.36%  mean_share=0.475
+  2009: n_lgus=1,513  dynasty_any=96.36%  mean_share=0.475
+  2010: n_lgus=1,490  dynasty_any=96.91%  mean_share=0.497
+  2011: n_lgus=1,490  dynasty_any=96.91%  mean_share=0.497
+  2012: n_lgus=1,490  dynasty_any=96.91%  mean_share=0.497
+  2013: n_lgus=1,461  dynasty_any=96.51%  mean_share=0.504
+  2014: n_lgus=1,461  dynasty_any=96.51%  mean_share=0.504
+  2015: n_lgus=1,461  dynasty_any=96.51%  mean_share=0.504
+  2016: n_lgus=1,576  dynasty_any=88.96%  mean_share=0.497
+  2017: n_lgus=1,576  dynasty_any=88.96%  mean_share=0.497
+  2018: n_lgus=1,576  dynasty_any=88.96%  mean_share=0.497
+  2019: n_lgus=1,606  dynasty_any=88.36%  mean_share=0.502
+  2020: n_lgus=1,606  dynasty_any=88.36%  mean_share=0.502
+  2021: n_lgus=1,606  dynasty_any=88.36%  mean_share=0.502
+  2022: n_lgus=1,558  dynasty_any=84.79%  mean_share=0.495
+  2023: n_lgus=1,558  dynasty_any=84.79%  mean_share=0.495
+  2024: n_lgus=1,558  dynasty_any=84.79%  mean_share=0.495

@@ -1,7 +1,7 @@
 ==============================================================================
 PANEL_ML QA
 ==============================================================================
-Rows: 55,904   Cols: 128
+Rows: 55,904   Cols: 178
 Years: 1992-2024
 LGUs:  1714
 
@@ -66,29 +66,118 @@ LGUs:  1714
   2010-2019: n=17,093  ur_a mean=0.070 non-null=98.8%  | ur_b mean=0.165 non-null=99.1%
   2020-2024: n= 8,560  ur_a mean=0.119 non-null=99.8%  | ur_b mean=0.179 non-null=99.8%
 
+-- BLGF coverage by year (rows where flag=True) --
+             in_ari  in_sef  in_ldrrmf  in_enr
+fiscal_year                                   
+1992              0       0          0       0
+1993              0       0          0       0
+1994              0       0          0       0
+1995              0       0          0       0
+1996              0       0          0       0
+1997              0       0          0       0
+1998              0       0          0       0
+1999              0       0          0       0
+2000              0       0          0       0
+2001              0       0          0       0
+2002              0       0          0       0
+2003              0       0          0       0
+2004              0       0          0       0
+2005              0       0          0       0
+2006              0       0          0       0
+2007              0       0          0       0
+2008              0       0          0       0
+2009           1713    1663          0       0
+2010           1713    1684          0       0
+2011           1713    1688          0       0
+2012           1713    1677          0       0
+2013           1676    1676          0       0
+2014           1713    1707          0       0
+2015           1713    1710          0       0
+2016           1690    1708          0       0
+2017           1634    1704          0       0
+2018           1713    1705       1512      14
+2019           1713    1700       1553     118
+2020           1706    1706       1610     116
+2021           1713    1708       1612       0
+2022           1713    1712       1681     390
+2023           1714    1713          0       0
+2024           1714    1714       1714       0
+
+-- BLGF coverage overall --
+  in_ari      27,264  ( 48.8%)
+  in_sef      27,175  ( 48.6%)
+  in_ldrrmf    9,682  ( 17.3%)
+  in_enr         638  (  1.1%)
+
 -- Feature non-null rates --
-  capex_share_avail                      48.6%
-  external_share                         74.7%
-  fund_balance_share                     48.6%
-  local_share                            98.9%
-  log_fund_cash_balance_end              49.0%
-  log_land_area_sqkm                     96.2%
-  log_nta_ira                            100.0%
-  log_population                         100.0%
-  log_total_capital_investment_exp       49.0%
-  log_total_current_operating_income     100.0%
-  log_total_external_sources             75.8%
-  log_total_local_sources                100.0%
-  nta_dependency                         98.9%
-  pop_density                            96.2%
-  revenue_hhi                            100.0%
-  target_ur_a                            48.4%
-  target_ur_b                            96.0%
-  ur_a                                   48.4%
-  ur_a_current                           48.4%
-  ur_a_lag1                              45.4%
-  ur_a_lag2                              42.3%
-  ur_b                                   98.9%
-  ur_b_current                           98.9%
-  ur_b_lag1                              95.8%
-  ur_b_lag2                              92.7%
+  ari_ari                                    48.8%
+  ari_ari_lag1                               45.7%
+  ari_ari_lag2                               42.6%
+  ari_lsr_dependency                         48.5%
+  ari_lsr_share                              48.5%
+  ari_nta                                    48.8%
+  ari_nta_dependency                         48.5%
+  ari_nta_lag1                               45.7%
+  ari_nta_lag2                               42.6%
+  ari_nta_share                              48.5%
+  ari_other_shares_dependency                48.5%
+  ari_share_national_wealth                  48.8%
+  ari_share_tobacco_excise                   48.8%
+  ari_total_lsr                              48.8%
+  ari_total_lsr_lag1                         45.7%
+  ari_total_lsr_lag2                         42.6%
+  ari_total_other_national_shares            48.8%
+  capex_share_avail                          48.6%
+  enr_has_activity                           100.0%
+  enr_share_national_wealth                  0.6%
+  external_share                             74.7%
+  fund_balance_share                         48.6%
+  ldrrmf_30_budget                           17.3%
+  ldrrmf_30_expenditures                     17.3%
+  ldrrmf_30_utilization                      16.4%
+  ldrrmf_70_budget                           17.3%
+  ldrrmf_70_expenditures                     17.3%
+  ldrrmf_70_utilization                      16.7%
+  ldrrmf_budget_share                        17.3%
+  ldrrmf_overall_utilization                 17.0%
+  ldrrmf_total_budget                        17.3%
+  ldrrmf_total_budget_lag1                   14.3%
+  ldrrmf_total_budget_lag2                   14.3%
+  ldrrmf_total_expenditures                  17.3%
+  ldrrmf_total_expenditures_lag1             14.3%
+  ldrrmf_total_expenditures_lag2             14.3%
+  local_share                                98.9%
+  log_ari_ari                                48.8%
+  log_ari_nta                                48.8%
+  log_ari_total_lsr                          48.8%
+  log_fund_cash_balance_end                  49.0%
+  log_land_area_sqkm                         96.2%
+  log_ldrrmf_total_budget                    17.3%
+  log_ldrrmf_total_expenditures              17.3%
+  log_nta_ira                                100.0%
+  log_population                             100.0%
+  log_sef_rpt_sef_collections                48.6%
+  log_sef_total_expenditures                 48.6%
+  log_total_capital_investment_exp           49.0%
+  log_total_current_operating_income         100.0%
+  log_total_external_sources                 75.8%
+  log_total_local_sources                    100.0%
+  nta_dependency                             98.9%
+  pop_density                                96.2%
+  revenue_hhi                                100.0%
+  sef_rpt_sef_collections                    48.6%
+  sef_rpt_sef_collections_lag1               45.5%
+  sef_rpt_sef_collections_lag2               42.5%
+  sef_share_income                           48.6%
+  sef_total_expenditures                     48.6%
+  sef_utilization                            48.3%
+  target_ur_a                                48.4%
+  target_ur_b                                96.0%
+  ur_a                                       48.4%
+  ur_a_current                               48.4%
+  ur_a_lag1                                  45.4%
+  ur_a_lag2                                  42.3%
+  ur_b                                       98.9%
+  ur_b_current                               98.9%
+  ur_b_lag1                                  95.8%
+  ur_b_lag2                                  92.7%

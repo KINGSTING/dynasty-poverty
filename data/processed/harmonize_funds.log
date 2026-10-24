@@ -1,0 +1,74 @@
+2026-10-13 20:42:56,639 | INFO    | Loading PSGC master: data\processed\psgc_lgu_master.parquet
+2026-10-13 20:42:56,779 | INFO    |   1724 LGUs loaded
+2026-10-13 20:42:56,779 | INFO    | 
+2026-10-13 20:42:56,781 | INFO    | ======================================================================
+2026-10-13 20:42:56,781 | INFO    | SEF: 16 files
+2026-10-13 20:42:56,782 | INFO    | ======================================================================
+2026-10-13 20:42:56,783 | INFO    |   parsing FY2009-SEF-Income-and-Expenditures.xlsx
+2026-10-13 20:42:56,998 | INFO    |     2561 LGU rows for FY2009
+2026-10-13 20:42:56,999 | INFO    |   parsing FY2010-SEF-Income-and-Expenditures.xlsx
+2026-10-13 20:42:57,165 | INFO    |     2604 LGU rows for FY2010
+2026-10-13 20:42:57,165 | INFO    |   parsing FY2011-SEF-Income-and-Expenditures.xlsx
+2026-10-13 20:42:57,331 | INFO    |     2626 LGU rows for FY2011
+2026-10-13 20:42:57,331 | INFO    |   parsing FY2012-SEF-Income-and-Expenditures.xlsx
+2026-10-13 20:42:57,513 | INFO    |     2609 LGU rows for FY2012
+2026-10-13 20:42:57,513 | INFO    |   parsing FY2013-SEF-Income-and-Expenditures.xlsx
+2026-10-13 20:42:57,682 | INFO    |     2608 LGU rows for FY2013
+2026-10-13 20:42:57,682 | INFO    |   parsing FY2014-SEF-Income-and-Expenditures.xlsx
+2026-10-13 20:42:57,859 | INFO    |     2679 LGU rows for FY2014
+2026-10-13 20:42:57,859 | INFO    |   parsing FY2015-SEF-Income-and-Expenditures.xlsx
+2026-10-13 20:42:58,038 | INFO    |     2682 LGU rows for FY2015
+2026-10-13 20:42:58,039 | INFO    |   parsing FY2016-SEF-Income-and-Expenditures.xlsx
+2026-10-13 20:42:58,231 | INFO    |     2680 LGU rows for FY2016
+2026-10-13 20:42:58,231 | INFO    |   parsing FY2017-SEF-Income-and-Expenditures.xlsx
+2026-10-13 20:42:58,397 | INFO    |     2662 LGU rows for FY2017
+2026-10-13 20:42:58,397 | INFO    |   parsing FY2018-SEF-Income-and-Expenditures.xlsx
+2026-10-13 20:42:58,567 | INFO    |     2651 LGU rows for FY2018
+2026-10-13 20:42:58,567 | INFO    |   parsing FY2019-SEF-Income-and-Expenditures.xlsx
+2026-10-13 20:42:58,741 | INFO    |     2680 LGU rows for FY2019
+2026-10-13 20:42:58,741 | INFO    |   parsing FY2020-SEF-Income-and-Expenditures.xlsx
+2026-10-13 20:42:59,086 | INFO    |     2568 LGU rows for FY2020
+2026-10-13 20:42:59,087 | INFO    |   parsing FY2021-SEF-Income-and-Expenditures.xlsx
+2026-10-13 20:42:59,710 | INFO    |     2642 LGU rows for FY2021
+2026-10-13 20:42:59,716 | INFO    |   parsing FY2022-SEF-Income-and-Expenditures.xlsx
+2026-10-13 20:43:00,393 | INFO    |     2663 LGU rows for FY2022
+2026-10-13 20:43:00,393 | INFO    |   parsing FY2023-SEF-Income-and-Expenditures.xlsx
+2026-10-13 20:43:01,013 | INFO    |     2685 LGU rows for FY2023
+2026-10-13 20:43:01,014 | INFO    |   parsing FY2024-SEF-Income-and-Expenditures.xlsx
+2026-10-13 20:43:01,600 | INFO    |     2686 LGU rows for FY2024
+2026-10-13 20:43:01,603 | INFO    | Total SEF rows (unmatched): 42286
+2026-10-13 20:43:01,604 | INFO    | Matching 42286 rows to PSGC (SEF)
+2026-10-13 20:43:03,395 | INFO    |   match rate: 100.00%
+2026-10-13 20:43:03,396 | INFO    |   tier distribution:
+match_tier
+1    41942
+2      289
+3       55
+2026-10-13 20:43:03,431 | INFO    | Wrote sef_lgu_year.parquet
+2026-10-13 20:43:03,432 | INFO    | 
+2026-10-13 20:43:03,432 | INFO    | ======================================================================
+2026-10-13 20:43:03,432 | INFO    | LDRRMF: 6 files
+2026-10-13 20:43:03,432 | INFO    | ======================================================================
+2026-10-13 20:43:03,432 | INFO    |   parsing FY2018-LDRRMF-by-LGU.xlsx
+2026-10-13 20:43:03,530 | INFO    |     1513 LGU rows for FY2018
+2026-10-13 20:43:03,530 | INFO    |   parsing FY2019-LDRRMF-by-LGU.xlsx
+2026-10-13 20:43:03,659 | INFO    |     1566 LGU rows for FY2019
+2026-10-13 20:43:03,659 | INFO    |   parsing FY2020-LDRRMF-by-LGU.xlsx
+2026-10-13 20:43:03,752 | INFO    |     1612 LGU rows for FY2020
+2026-10-13 20:43:03,752 | INFO    |   parsing FY2021-LDRRMF-by-LGU.xlsx
+2026-10-13 20:43:03,847 | INFO    |     1637 LGU rows for FY2021
+2026-10-13 20:43:03,847 | INFO    |   parsing FY2022-LDRRMF-by-LGU.xlsx
+2026-10-13 20:43:03,942 | INFO    |     1683 LGU rows for FY2022
+2026-10-13 20:43:03,942 | INFO    |   parsing FY2024-LDRRMF-by-LGU.xlsx
+2026-10-13 20:43:04,045 | INFO    |     1716 LGU rows for FY2024
+2026-10-13 20:43:04,045 | INFO    | Total LDRRMF rows (unmatched): 9727
+2026-10-13 20:43:04,046 | INFO    | Matching 9727 rows to PSGC (LDRRMF)
+2026-10-13 20:43:05,160 | INFO    |   match rate: 99.81%
+2026-10-13 20:43:05,161 | INFO    |   tier distribution:
+match_tier
+0      18
+1    7969
+2    1380
+3     360
+2026-10-13 20:43:05,175 | INFO    | Wrote ldrrmf_lgu_year.parquet
+2026-10-13 20:43:05,175 | INFO    | Done.
