@@ -667,3 +667,5 @@ python -u src\shap_report.py
 ---
 
 *Generated: 2026-09-24. Pipeline version: NTA-Fiscal v0.1.*
+#   d y n a s t y - p o v e r t y  
+ 
